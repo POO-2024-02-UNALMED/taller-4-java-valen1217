@@ -5,18 +5,18 @@ public class Persona {
     private int cedula;
 
     public Persona() {
-        this.nombre = "Sin nombre";
+        this.nombre = "";
         this.cedula = 0;
     }
 
     public Persona(String nombre) {
         this.nombre = nombre;
-        this.cedula = 1;
+        this.cedula = 1; 
     }
 
     public Persona(int cedula) {
-        this.nombre = "Sin nombre";
         this.cedula = cedula;
+        this.nombre = "";
     }
 
     public Persona(String nombre, int cedula) {
@@ -25,15 +25,15 @@ public class Persona {
     }
 
     public Persona(int cedula, String nombre) {
-        this.nombre = nombre;
         this.cedula = cedula;
-    }
-
-    public String getNombre() {
-        return nombre;
+        this.nombre = nombre;
     }
 
     public int getCedula() {
-        return cedula;
+        return this.cedula;
+    }
+
+    public String getNombre() {
+        return this.nombre;
     }
 }
