@@ -23,9 +23,9 @@ public class Asignatura {
         this.codigoExterno = codigoExterno;
     }
 
-    public Asignatura(String nombre, int codigoExterno, int codigoInterno, Tipo tipo) {
+    public Asignatura(String nombre, int codigoExterno, int otroCodigo, Tipo tipo) {
         this.nombre = nombre;
-        this.codigoExterno = codigoExterno;
+        this.codigoExterno = otroCodigo;
         this.tipo = tipo;
     }
 
@@ -33,7 +33,7 @@ public class Asignatura {
         this.nombre = nombre;
     }
 
-    public void cambiarDatos(int codigoExterno) {
-        this.codigoExterno = codigoExterno;
+    public void setCodigoInterno(int codigoInterno) {
+        this.codigoExterno = codigoInterno;
     }
 }
