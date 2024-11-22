@@ -24,4 +24,8 @@ public class Asignatura {
         this.codigoExterno = codigoExterno;
         this.tipo = tipo;
     }
+    public void setCodigoInterno(int codigoInterno) {
+    this.codigoInterno = codigoInterno;
+}
+
 }
