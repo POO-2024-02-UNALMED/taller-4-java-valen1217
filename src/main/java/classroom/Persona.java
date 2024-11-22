@@ -1,22 +1,11 @@
 package classroom;
 
 public class Persona {
-    private String nombre;
     private int cedula;
-
-    public Persona() {
-        this.nombre = "";
-        this.cedula = 0;
-    }
-
-    public Persona(String nombre) {
-        this.nombre = nombre;
-        this.cedula = 1; 
-    }
+    private String nombre;
 
     public Persona(int cedula) {
         this.cedula = cedula;
-        this.nombre = ""; 
     }
 
     public Persona(String nombre, int cedula) {
@@ -29,19 +18,12 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    public Persona() {
+        this.cedula = 0; 
+        this.nombre = "Sin nombre"; 
+    }
+
     public int getCedula() {
-        return this.cedula;
-    }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public void setCedula(int cedula) {
-        this.cedula = cedula;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+        return cedula;
     }
 }
