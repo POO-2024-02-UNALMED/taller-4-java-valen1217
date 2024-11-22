@@ -16,7 +16,7 @@ public class Persona {
 
     public Persona(int cedula) {
         this.cedula = cedula;
-        this.nombre = "";
+        this.nombre = ""; 
     }
 
     public Persona(String nombre, int cedula) {
@@ -35,5 +35,13 @@ public class Persona {
 
     public String getNombre() {
         return this.nombre;
+    }
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }
