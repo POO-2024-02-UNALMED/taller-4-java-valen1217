@@ -5,7 +5,7 @@ public class Grupo {
     public Persona[] estudiantes;
     public Persona profesor;
     public Asignatura asignatura;
-    public int codigo;  // No usar "final" para permitir la asignación
+    public final int codigo;
     public String horario;
 
     public Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
@@ -35,7 +35,7 @@ public class Grupo {
             }
         }
     }
-    
+
     void cambiarEstudiante(int indice, Persona estudiante) {
         estudiantes[indice] = estudiante;
     }
