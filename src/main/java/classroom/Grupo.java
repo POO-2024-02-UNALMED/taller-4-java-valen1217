@@ -23,19 +23,16 @@ public class Grupo {
         this.horario = horario;
     }
 
-    public void cambiarEstudiante(int index, Persona estudiante) {
-        if (index >= 0 && index < estudiantes.length) {
-            estudiantes[index] = estudiante;
-        }
+    public void cambiarEstudiante(int indice, Persona estudiante) {
+        this.estudiantes[indice] = estudiante;
     }
 
-    public void cambiarEstudiante(Persona oldEstudiante, Persona newEstudiante) {
+    public void cambiarEstudiante(Persona estudianteAntiguo, Persona estudianteNuevo) {
         for (int i = 0; i < estudiantes.length; i++) {
-            if (estudiantes[i].getCedula() == oldEstudiante.getCedula()) {
-                estudiantes[i] = newEstudiante;
+            if (estudiantes[i] == estudianteAntiguo) {
+                estudiantes[i] = estudianteNuevo;
                 break;
             }
         }
     }
 }
-
