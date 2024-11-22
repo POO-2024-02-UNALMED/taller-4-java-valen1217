@@ -1,3 +1,5 @@
+package classroom;
+
 public class Persona {
 
     final long cedula;
