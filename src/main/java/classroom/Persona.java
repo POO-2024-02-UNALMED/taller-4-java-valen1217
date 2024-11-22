@@ -24,4 +24,8 @@ public class Persona {
         this.nombre = nombre;
         this.id = id;
     }
+    public String getCedula() {
+    return cedula;
+}
+
 }
