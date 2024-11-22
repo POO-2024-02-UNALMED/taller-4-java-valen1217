@@ -15,24 +15,27 @@ public class Grupo {
         this.horario = horario;
     }
 
-    public Grupo(int cantidadEstudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
-        this.estudiantes = new Persona[cantidadEstudiantes];
+    public Grupo(int numEstudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
+        this.estudiantes = new Persona[numEstudiantes];
         this.profesor = profesor;
         this.asignatura = asignatura;
         this.codigo = codigo;
         this.horario = horario;
     }
 
-    public void cambiarEstudiante(int indice, Persona estudiante) {
-        this.estudiantes[indice] = estudiante;
+    public void cambiarEstudiante(int index, Persona estudiante) {
+        if (index >= 0 && index < estudiantes.length) {
+            estudiantes[index] = estudiante;
+        }
     }
 
-    public void cambiarEstudiante(Persona estudianteAnterior, Persona estudianteNuevo) {
+    public void cambiarEstudiante(Persona oldEstudiante, Persona newEstudiante) {
         for (int i = 0; i < estudiantes.length; i++) {
-            if (estudiantes[i].equals(estudianteAnterior)) {
-                estudiantes[i] = estudianteNuevo;
+            if (estudiantes[i].getCedula() == oldEstudiante.getCedula()) {
+                estudiantes[i] = newEstudiante;
                 break;
             }
         }
     }
 }
+
