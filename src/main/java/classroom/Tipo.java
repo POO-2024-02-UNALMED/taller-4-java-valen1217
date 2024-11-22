@@ -1,5 +1,4 @@
-package classroom;
-
 public enum Tipo {
-    OBLIGATORIA, OPTATIVA;
+    FUNDAMENTACION,
+    DISCIPLINAR
 }
