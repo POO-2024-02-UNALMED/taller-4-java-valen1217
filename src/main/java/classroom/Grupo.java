@@ -23,9 +23,9 @@ public class Grupo {
         this.horario = horario;
     }
 
-public void cambiarEstudiante(int index, Persona estudiante) {
-    estudiantes[index] = estudiante;
-}
+    public void cambiarEstudiante(int index, Persona estudiante) {
+        estudiantes[index] = estudiante;
+    }
 
     public int getCodigo() {
         return this.codigo;
