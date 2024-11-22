@@ -37,4 +37,8 @@ public class Grupo {
             estudiantes[indice] = estudiante;
         }
     }
+    public int getCodigo() {
+    return codigo;
+}
+
 }
