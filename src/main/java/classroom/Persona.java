@@ -1,31 +1,54 @@
 package classroom;
 
 public class Persona {
-    public long id;
-    public String nombre;
 
-    public Persona() {
+    final long cedula;
+    String nombre;
+    static int totalPersonas;
+
+    static {
+        totalPersonas = 0;
     }
 
-    public Persona(long id) {
-        this.id = id;
+    public Persona() {
+        this.cedula = 0; 
+        this.nombre = "Sin nombre"; 
+        totalPersonas++;
+    }
+
+    public Persona(long cedula) {
+        this.cedula = cedula;
+        this.nombre = "Sin nombre"; 
+        totalPersonas++;
+    }
+
+    public Persona(long cedula, String nombre) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        totalPersonas++;
+    }
+
+    public Persona(String nombre, long cedula) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        totalPersonas++;
     }
 
     public Persona(String nombre) {
+        this.cedula = 0; 
         this.nombre = nombre;
+        totalPersonas++;
     }
 
-    public Persona(long id, String nombre) {
-        this.id = id;
-        this.nombre = nombre;
+    public long getCedula() {
+        return cedula;
     }
 
-    public Persona(String nombre, long id) {
-        this.nombre = nombre;
-        this.id = id;
+    public String getNombre() {
+        return nombre;
     }
-    public String getCedula() {
-    return cedula;
-}
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }
