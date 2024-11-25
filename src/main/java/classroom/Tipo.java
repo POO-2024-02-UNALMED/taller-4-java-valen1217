@@ -10,4 +10,8 @@ public enum Tipo {
     private Tipo(int codigo) {
         this.codigo = codigo;
     }
+
+    public int getCodigo() {
+        return this.codigo;
+    }
 }
