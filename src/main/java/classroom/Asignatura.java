@@ -20,12 +20,22 @@ public class Asignatura {
         this.codigoInterno = 0;  
     }
 
-    public Asignatura(int codigoExterno, Tipo tipo) {
+   /* public Asignatura(int codigoExterno, Tipo tipo) {
         this.nombre = "Sin nombre";  
         this.tipo = tipo != null ? tipo : Tipo.FUNDAMENTACION;  
         this.codigoExterno = codigoExterno; 
         this.codigoInterno = 0; 
+    }*/
+
+    public Asignatura(int codigoExterno, Tipo tipo) {
+    this.nombre = tipo != null ? tipo : Tipo.FUNDAMENTACION;  
+    this.codigoExterno = codigoExterno; 
+    this.codigoInterno = 0; 
+
+    if (this.nombre.isEmpty()) {
+        this.nombre = "Asignatura_" + codigoExterno;
     }
+}
 
 public Asignatura(String nombre, int codigoExterno, int codigoInterno, Tipo tipo) {
     this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Sin nombre"; 
