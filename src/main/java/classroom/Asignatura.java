@@ -4,37 +4,56 @@ public class Asignatura {
     String nombre;
     Tipo tipo;
     int codigoExterno;
+    int codigoInterno;  // Add this field
 
+    // Default constructor
     public Asignatura() {
         this.nombre = "Sin nombre";
         this.tipo = Tipo.FUNDAMENTACION;
         this.codigoExterno = 0;
+        this.codigoInterno = 0; // Initialize codigoInterno
     }
 
+    // Constructor with nombre and tipo
     public Asignatura(String nombre, Tipo tipo) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.codigoExterno = 0;
+        this.codigoInterno = 0;
     }
+
 
     public Asignatura(int codigoExterno, Tipo tipo) {
         this.nombre = "Sin nombre";
         this.tipo = tipo;
         this.codigoExterno = codigoExterno;
+        this.codigoInterno = 0; 
     }
+
 
     public Asignatura(String nombre, int codigoExterno, Tipo tipo) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.codigoExterno = codigoExterno;
+        this.codigoInterno = 0; 
     }
+
 
     public void cambiarDatos(String nuevoNombre) {
         this.nombre = nuevoNombre;
     }
 
+ 
     public void cambiarDatos(int nuevoCodigo) {
         this.codigoExterno = nuevoCodigo;
     }
 
+
+    public void setCodigoInterno(int codigoInterno) {
+        this.codigoInterno = codigoInterno;
+    }
+
+    public int getCodigoInterno() {
+        return this.codigoInterno;
+    }
 }
