@@ -26,9 +26,6 @@ public class Asignatura {
         this.codigoExterno = codigoExterno; 
         this.codigoInterno = 0; 
 
-         if (this.nombre.isEmpty()) {
-        this.nombre = "Asignatura_" + codigoExterno;
-    }
     }
 
 
