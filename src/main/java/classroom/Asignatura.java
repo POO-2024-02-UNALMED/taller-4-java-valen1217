@@ -27,12 +27,13 @@ public class Asignatura {
         this.codigoInterno = 0; 
     }
 
-    public Asignatura(String nombre, int codigoExterno, int codigoInterno, Tipo tipo) {
-        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Sin nombre"; 
-        this.codigoExterno = codigoExterno; 
-        this.codigoInterno = codigoInterno;
-        this.tipo = tipo != null ? tipo : Tipo.FUNDAMENTACION; 
-    }
+public Asignatura(String nombre, int codigoExterno, int codigoInterno, Tipo tipo) {
+    this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Sin nombre"; 
+    this.codigoExterno = (codigoExterno != 0) ? codigoExterno : codigoInterno; 
+    this.codigoInterno = codigoInterno;
+    this.tipo = tipo != null ? tipo : Tipo.FUNDAMENTACION;  
+}
+
 
     public void cambiarDatos(String nuevoNombre) {
         this.nombre = nuevoNombre;
