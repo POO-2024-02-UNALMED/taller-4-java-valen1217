@@ -2,7 +2,7 @@ package classroom;
 
 public class Persona {
     private String nombre;
-    private int cedula;
+    public int cedula;
 
     public Persona() {
         this.nombre = "Sin nombre";
