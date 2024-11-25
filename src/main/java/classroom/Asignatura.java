@@ -14,31 +14,31 @@ public class Asignatura {
         this.codigoInterno = 0;
     }
 
-  
+
     public Asignatura(String nombre, Tipo tipo) {
-        this.nombre = nombre != null ? nombre : "Sin nombre";  
-        this.tipo = tipo != null ? tipo : Tipo.FUNDAMENTACION;  
-        this.codigoExterno = 0;  // Valor por defecto
-        this.codigoInterno = 0;  // Valor por defecto
+        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Sin nombre";  
+        this.tipo = (tipo != null) ? tipo : Tipo.FUNDAMENTACION; 
+        this.codigoExterno = 0;  
+        this.codigoInterno = 0;  
     }
 
   
     public Asignatura(int codigoExterno, Tipo tipo) {
         this.nombre = "Sin nombre";  
-        this.tipo = tipo != null ? tipo : Tipo.FUNDAMENTACION;
+        this.tipo = (tipo != null) ? tipo : Tipo.FUNDAMENTACION;  
         this.codigoExterno = codigoExterno; 
         this.codigoInterno = 0; 
     }
 
-
+    
     public Asignatura(String nombre, int codigoExterno, int codigoInterno, Tipo tipo) {
-        this.nombre = nombre != null ? nombre : "Sin nombre"; 
-        this.codigoExterno = codigoExterno;
-        this.codigoInterno = codigoInterno; 
-        this.tipo = tipo != null ? tipo : Tipo.FUNDAMENTACION; 
+        this.nombre = (nombre != null && !nombre.isEmpty()) ? nombre : "Sin nombre"; 
+        this.codigoExterno = codigoExterno; 
+        this.codigoInterno = codigoInterno;
+        this.tipo = (tipo != null) ? tipo : Tipo.FUNDAMENTACION;  
     }
 
-   
+    
     public void cambiarDatos(String nuevoNombre) {
         this.nombre = nuevoNombre;
     }
@@ -47,7 +47,7 @@ public class Asignatura {
         this.codigoExterno = nuevoCodigo;
     }
 
- 
+  
     public void setCodigoInterno(int codigoInterno) {
         this.codigoInterno = codigoInterno;
     }
